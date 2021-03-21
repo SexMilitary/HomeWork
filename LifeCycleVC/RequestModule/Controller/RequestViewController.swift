@@ -97,7 +97,6 @@ extension RequestViewController: UICollectionViewDataSource, UICollectionViewDel
         case .posturlencoded:
             print("posturlencoded")
             dataFetcherService.fetchPostRequestTest(contentType: .urlencoded) { (data) in
-                print(data)
                 self.showAlert(with: "Ошибочка вышла... Или нет!", and: "Не знаю где протестировать это...")
             }
         }

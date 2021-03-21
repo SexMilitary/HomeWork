@@ -60,7 +60,6 @@ class DataFetcherService {
                                               response: completion)
         case .urlencoded:
             url = APIConfigurator.urlForTestRequest(ofType: .post, params: JSONModel.getArray(from: data1))
-            print(url)
             header["application/x-www-form-urlencoded"] = "Content-Type"
             networkDataFetcher.uploadJSONData(url: url,
                                               headers: header,
