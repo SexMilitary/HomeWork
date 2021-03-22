@@ -9,7 +9,7 @@ import UIKit
 
 protocol DataFetcher {
     func fetchGenericJSONData<T: Decodable>(url: URL, response: @escaping (T?) -> Void)
-    func uploadJSONData(url: URL, headers: Headers?, method: HTTPMethod, userData: JSONModel?, response: @escaping (JSONModel?) -> Void)
+    func uploadJSONData(url: URL, headers: Headers?, method: HTTPMethod, bodyType: BodyType, userData: JSONModel?, response: @escaping (JSONModel?) -> Void)
 }
 
 class NetworkDataFetcher: DataFetcher {
@@ -21,7 +21,7 @@ class NetworkDataFetcher: DataFetcher {
     }
     
     func fetchGenericJSONData<T: Decodable>(url: URL, response: @escaping (T?) -> Void) {
-        networking.request(url: url, method: HTTPMethod.get.rawValue, headers: nil, userData: nil) { (data, error) in
+        networking.request(url: url, method: HTTPMethod.get.rawValue, bodyType: .json, headers: nil, userData: nil) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
                 response(nil)
@@ -32,8 +32,9 @@ class NetworkDataFetcher: DataFetcher {
         }
     }
     
-    func uploadJSONData(url: URL, headers: Headers?, method: HTTPMethod, userData: JSONModel?, response: @escaping (JSONModel?) -> Void) {
-        networking.request(url: url, method: method.rawValue, headers: headers, userData: userData) { (data, error) in
+    func uploadJSONData(url: URL, headers: Headers?, method: HTTPMethod, bodyType: BodyType, userData: JSONModel?, response: @escaping (JSONModel?) -> Void) {
+        
+        networking.request(url: url, method: method.rawValue, bodyType: bodyType, headers: headers, userData: userData) { (data, error) in
             
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
@@ -61,7 +62,7 @@ class NetworkDataFetcher: DataFetcher {
     func downloadImage(url: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
         guard let url = URL(string: url) else { return }
         
-        networking.request(url: url, method: HTTPMethod.get.rawValue, headers: nil, userData: nil) { (data, error) in
+        networking.request(url: url, method: HTTPMethod.get.rawValue, bodyType: .json, headers: nil, userData: nil) { (data, error) in
             
             if let error = error {
                 completion(.failure(error))

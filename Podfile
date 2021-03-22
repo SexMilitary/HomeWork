@@ -7,5 +7,5 @@ target 'LifeCycleVC' do
 
   # Pods for LifeCycleVC
 	pod 'Kingfisher', '~> 6.0'
-
+	pod 'Alamofire'
 end

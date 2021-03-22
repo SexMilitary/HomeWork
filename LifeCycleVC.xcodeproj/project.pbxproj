@@ -17,6 +17,7 @@
 		B506898826036F7900B5AC4D /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506898726036F7900B5AC4D /* UIButton + Extension.swift */; };
 		B50689942603A70900B5AC4D /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50689932603A70900B5AC4D /* ModalViewController.swift */; };
 		B50689982603A71E00B5AC4D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50689972603A71E00B5AC4D /* ModalView.swift */; };
+		B5077BE22607C51B00D79457 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5077BE12607C51B00D79457 /* AlamofireNetworkRequest.swift */; };
 		B5388A6B2605032F00F20210 /* bigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5388A6A2605032F00F20210 /* bigImage.jpg */; };
 		B5388A7026050BFF00F20210 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5388A6F26050BFF00F20210 /* TabBarController.swift */; };
 		B5388A7A260537BA00F20210 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5388A79260537BA00F20210 /* NetworkViewController.swift */; };
@@ -53,6 +54,7 @@
 		B506898726036F7900B5AC4D /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		B50689932603A70900B5AC4D /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		B50689972603A71E00B5AC4D /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		B5077BE12607C51B00D79457 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		B5388A6A2605032F00F20210 /* bigImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigImage.jpg; sourceTree = "<group>"; };
 		B5388A6F26050BFF00F20210 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B5388A79260537BA00F20210 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
@@ -262,9 +264,10 @@
 				B5388AA62605CDD700F20210 /* Model */,
 				B5388A9F2605CCBB00F20210 /* DataFetcherService.swift */,
 				B5388A9C2605CC7100F20210 /* NetworkDataFetcher.swift */,
-				B5388AA22605CD1600F20210 /* LocalDataFetcher.swift */,
 				B5388A982605CC2400F20210 /* NetworkService.swift */,
 				B5388AB42605E65E00F20210 /* APIConfigurator.swift */,
+				B5388AA22605CD1600F20210 /* LocalDataFetcher.swift */,
+				B5077BE12607C51B00D79457 /* AlamofireNetworkRequest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B5A884B926075C490047ACC5 /* JSONModel.swift in Sources */,
 				B5388A7026050BFF00F20210 /* TabBarController.swift in Sources */,
 				B506897E26036D6600B5AC4D /* SecondView.swift in Sources */,
+				B5077BE22607C51B00D79457 /* AlamofireNetworkRequest.swift in Sources */,
 				B5388A9D2605CC7100F20210 /* NetworkDataFetcher.swift in Sources */,
 				B5388A8126053CB800F20210 /* NetworkTableDataSource.swift in Sources */,
 				B5388AA82605CDF400F20210 /* NewsModel.swift in Sources */,

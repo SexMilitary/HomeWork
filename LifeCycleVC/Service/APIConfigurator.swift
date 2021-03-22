@@ -44,6 +44,7 @@ struct APIConfigurator {
             urlComponents.path = RequestEndpointPath.delete.rawValue
         }
         
+        // Можно передавать “application/x-www-form-urlencoded” этим способом:
         urlComponents.queryItems = params.map { URLQueryItem(name: $0, value: $1) }
         
         return urlComponents.url
